@@ -1,0 +1,8 @@
+(define(separar texto)
+  (cond
+    ((null? (string->list texto)) '() )
+    ((not(equal? (car (string->list texto) )  #\ )) (display (car (string->list texto))) (cons  (car (string->list texto)) (separar (list->string(cdr (string->list texto))))))
+    (else
+     (separar (list->string(cdr (string->list texto)))))
+    )
+  )
